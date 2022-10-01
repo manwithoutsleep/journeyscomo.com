@@ -1,0 +1,24 @@
+# Generated with ngx-htaccess-generator v1.0.1
+# https://julianpoemp.github.io/ngx-htaccess-generator/
+# 
+# [NC] = No Case (i.e. case insensitive)
+# [L]  = Last (i.e. don't process any more commands)
+# 
+# This file always needs to be the same in the root and /src folders
+# in order for the PHP and Angular code to both work.
+
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirection of API requests
+    RewriteRule ^api/public/counselor$ /api/public/index.php [NC,L]
+    RewriteRule ^api/public/newsletter$ /api/public/index.php [NC,L]
+
+    # Redirection of requests to index.html
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+    RewriteRule ^.*$ - [NC,L]
+
+    RewriteRule ^(.*) index.html [NC,L]
+</IfModule>

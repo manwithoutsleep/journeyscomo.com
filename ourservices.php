@@ -1,0 +1,77 @@
+<?php
+
+ob_start ( );
+
+include_once ( 'includes/includes.php' );
+
+$PageTitle   = "Our Services";
+$MenuItem    = "ourservices";
+$Breadcrumbs = GetDefaultBreadcrumbs ( $PageTitle, $BreadcrumbSeparator );
+
+function customPageHeader ( ) {?>
+  <!-- Include Page-Specific Header Tags Here -->
+<?php }
+
+show_header ( $PageTitle, $MenuItem, $Breadcrumbs, true, false );
+
+?>
+
+<section class="ourservices">
+
+  <section class="left-column">
+
+    <h2>Our Services</h2>
+  
+    <div><?php echo $SiteName ?> offers individual, family, couples, and group therapy for adults, teens and children dealing with the following issues:</div>
+  
+    <div>
+      <p>Addictions</p>
+      <p>Depression</p>
+      <p>Stress and Anxiety</p>
+      <p>Phobias</p>
+      <p>Grief and Loss</p>
+      <p>Emotional and Physical Abuse</p>
+      <p>Trauma and Sexual Assault</p>
+      <p>ADHD</p>
+      <p>Eating Disorders</p>
+      <p>PTSD</p>
+      <p>Premarital Counseling</p>
+      <p>Communication Issues</p>
+      <p>Blending Families</p>
+      <p>Codependency and Boundaries</p>
+      <p>Anger Management</p>
+      <p>Parenting Stress</p>
+      <p>Self Esteem and Self-Confidence Issues</p>
+    </div>
+
+  </section>
+
+  <figure>
+    <img src="images/OurServicesTop.jpg" />
+    <img src="images/OurServicesMiddle.png" />
+    <img src="images/OurServicesBottom.jpg" />
+  </figure>
+
+  <section class="right-column">
+
+    <h3>INDIVIDUAL COUNSELING</h3>
+    <p>Each individual is unique, with their own experiences, interpretations, and beliefs.  A variety of circumstances can keep us from experiencing freedom and enjoyment of life.  We want to carefully collaborate with you to build hope and purpose in your heart, your life and your relationships, restoring freedom and enjoyment.</p>
+
+    <h3>COUPLES COUNSELING</h3>
+    <p>Arguments, disagreements, loneliness, and hurt&hellip; there is nothing more joyful when our primary relationships are working well, and nothing more painful when they are not!   In couples therapy our focus will be to understand what is going on, particularly as it relates to the patterns that exist in the relationship and then, we'll work to de-escalate negative cycles and introduce new patterns of relating to one another.</p>
+
+    <h3>FAMILY COUNSELING</h3>
+    <p>In Family Therapy, the family is seen as a "whole" system, rather than just as the sum of its individual members.  Including various members of the family can be beneficial to a wide variety of therapeutic goals including education or insight into family dynamics.  Family therapy helps promote greater encouragement and support among all members of the family.</p>
+
+    <h3>GROUP COUNSELING</h3>
+    <p>Group therapy happens when people from all different walks of life come together with a common focus.  Group therapy offers several benefits&hellip; by listening carefully to others and their experiences you can experience new insights and find out that you are not alone in your struggles.</p>
+
+  </section>
+
+</section>
+
+<?php
+
+show_footer ( );
+
+?>

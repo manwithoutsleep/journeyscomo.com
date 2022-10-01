@@ -1,0 +1,55 @@
+# .gitignore
+# These files will not be added to the Git archive.
+
+# ===================================================
+
+# Ingore all generated and third party binaries
+# Each developer should maintain his own binaries
+# If third-party binaries change, developers are
+# responsible for informing other developers.
+
+[Bb]in/
+[Dd]ebug*/
+[Oo]bj/
+[Rr]elease/
+
+# ===================================================
+
+# Ignore all test results folders
+# Each developer should run his own tests
+
+TestResults/
+
+# ===================================================
+
+# Ignore all .SUO files
+# Each developer should have his own
+
+*.suo
+*.sln.docstates.suo
+
+# ===================================================
+
+#Ignore files created by Visual Studio
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.bak
+*.cache
+*.ilk
+*.sbr
+_ReSharper*/
+
+# ===================================================
+
+#ignore thumbnails created by windows
+Thumbs.db
+
+# ===================================================
+
+# Ignore log files
+error_log
