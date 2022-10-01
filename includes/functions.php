@@ -5,7 +5,7 @@ function GetDefaultBreadcrumbs ( $PageTitle, $Separator ) {
   if ( !$Separator ) $Separator = $GLOBALS [ '$BreadcrumbSeparator' ];
 
   if ( $PageTitle ) {
-    return '<a href="/">Home</a>' . $Separator . $PageTitle;
+    return '<a href="/">Home</a> > ' . $Separator . $PageTitle;
   } else {
     return '';
   }

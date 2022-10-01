@@ -1,0 +1,7 @@
+<html>
+    <body>
+        <!--#include virtual="includes/header.shtml"-->
+        <p>This is the body</p>
+        <!--#include virtual="includes/footer.shtml"-->
+    </body>
+</html>
