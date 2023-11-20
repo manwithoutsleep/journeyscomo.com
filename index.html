@@ -2,104 +2,124 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-  <title>Journeys Christian Counseling</title>
+    <title>Journeys Christian Counseling</title>
 
-  <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans' />
-  <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' />
-  <link rel='stylesheet' type='text/css' href='css/main.css' />
+    <link rel="stylesheet" type='text/css' href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans' />
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' />
+    <link rel='stylesheet' type='text/css' href='sass/styles.css' />
 
-  <script type="text/javascript" src="/js/welcome.js"></script>
+    <script type="text/javascript" src="js/welcome.js"></script>
 </head>
 
 <body id="index" class="home">
-  <form id="form1">
-    <header id="banner" class="body">
-      <hgroup>
-        <h1><a href="/">Journey's Christian Counseling</a></h1>
-        <div class="address">
-          Journey's Christian Counseling<br />
-          601 West Nifong, Bldg 5A, Columbia, MO 65203<br />
-          (573) 355-0263
-          </h2>
-          <div class="clear"></div>
-      </hgroup>
-      <nav>
-        <ul>
-          <li><a href="meetus.html">Meet Us</a></li>
-          <li><a href="ourservices.html">Our Services</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="gettingstarted.html">Getting Started</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="contactus.html">Contact Us</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <section id="content" class="body">
-
-      <section class="home-page">
-
-        <section class="sidebar">
-
-          <article class="side-text video">
-            <div>
-              <!-- Start SimplePractice Appointment-Request Widget Embed Code -->
-              <div class="spwidget-button-wrapper"><a href="https://journeys-christian-counseling.clientsecure.me" class="spwidget-button"
-                data-spwidget-scope-id="f08a52e2-d87e-4fbd-b2b0-9583ed9d9dc8"
-                data-spwidget-scope-uri="journeys-christian-counseling"
-                data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b"
-                data-spwidget-scope-global data-spwidget-autobind>
-                Click To Make An Appointment
-              </a></div>
-              <script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js"></script>
-              <!-- End SimplePractice Appointment-Request Widget Embed Code -->
+    <div class="main-wrapper">
+        <header class="header" class="body">
+            <div class="header-small-screen">
+                <button mat-icon-button class="menu-button">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <a routerLink="/"><img src="/assets/site-images/CompassLogoSmall.png" alt="Compass Christian Counseling"></a>
             </div>
-            <video controls>
-              <source src="videos/JourneysIntroCheryl.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-              <source src="videos/JourneysIntroCheryl.webm" type='video/webm; codecs="vp8, vorbis"' />
-            </video>
-            <h2>Cheryl Arens, M.Ed., LPC</h2>
-          </article>
+            <div class="header-large-screen">
+                <hgroup>
+                    <h1><a href="/">Journey's Christian Counseling</a></h1>
+                    <div class="address">
+                        Journey's Christian Counseling<br />
+                        601 West Nifong, Bldg 5A, Columbia, MO 65203<br />
+                        (573) 355-0263
+                    </div>
+                </hgroup>
+                <nav>
+                    <div class="nav-item"><a href="meetus.html">Meet Us</a></div>
+                    <div class="nav-item"><a href="ourservices.html">Our Services</a></div>
+                    <div class="nav-item"><a href="faq.html">FAQ</a></div>
+                    <div class="nav-item"><a href="gettingstarted.html">Getting Started</a></div>
+                    <div class="nav-item"><a href="resources.html">Resources</a></div>
+                    <div class="nav-item"><a href="contactus.html">Contact Us</a></div>
+                </nav>
+            </div>
+        </header>
 
-          <article class="side-text side-text">
-            <h2>Newletters</h2>
-            <a href="newsletter.html"><img src="images/newsletter.jpg" alt="Newsletters" /></a>
-            <p><a href="newsletter.html">Check out Journeys' Newsletters!</a></p>
-          </article>
+        <section id="content" class="body">
 
-        </section>
+            <div class="sidenav" #sidenav mode="over" fixedInViewport="true" fixedTopGap="56">
+                <div class="sidenav-list">
+                    <a class="sidenav-link" href="/home.html">Home</a>
+                    <a class="sidenav-link" href="/meetus.html">Meet Us</a>
+                    <a class="sidenav-link" href="/ourservices.html">Our Services</a>
+                    <a class="sidenav-link" href="/faq.html">FAQ</a>
+                    <a class="sidenav-link" href="/gettingstarted.html">Getting Started</a>
+                    <a class="sidenav-link" href="/resources.html">Resources</a>
+                    <a class="sidenav-link" href="/contactus.html">Contact Us</a>
+                </div>
+            </div>
 
-        <section class="main">
+            <section class="home-page">
 
-          <article id="rotating-banner" class="rotating-banner">
-            <img src="images/rotator/Rotator1.jpg" alt="Man sitting on ground"/>
-            <img src="images/rotator/Rotator2.jpg" alt="Woman in distress"/>
-            <img src="images/rotator/Rotator3.jpg" alt="Couple walking in the autumn woods"/>
-            <img src="images/rotator/Rotator4.jpg" alt="Family - three generations"/>
-            <img src="images/rotator/Rotator5.jpg" alt="Happy couple"/>
-            <div class="rotator-overlay">Sometimes you just need<br />a little help along the way.</div>
+                <section class="main">
+
+                    <article id="rotating-banner" class="rotating-banner">
+                        <img src="images/rotator/Rotator1.jpg" alt="Man sitting on ground"/>
+                        <img src="images/rotator/Rotator2.jpg" alt="Woman in distress"/>
+                        <img src="images/rotator/Rotator3.jpg" alt="Couple walking in the autumn woods"/>
+                        <img src="images/rotator/Rotator4.jpg" alt="Family - three generations"/>
+                        <img src="images/rotator/Rotator5.jpg" alt="Happy couple"/>
+                        <div class="rotator-overlay">Sometimes you just need<br />a little help along the way.</div>
+                        <div class="clear"></div>
+                    </article>
+
+                    <div class="clear"></div>
+
+                    <article class="main-text">
+                        <h2>Welcome!</h2>
+                        <p>
+                            At Journeys Christian Counseling our goal is to provide a safe and supportive place for individuals,
+                            couples, and families to find hope and healing. You might be looking for extra support and guidance
+                            through a challenging situation or are ready to take steps in a new direction. The first thing we'll
+                            do is listen without judgment. Then, we'll walk alongside of you on your journey. Together we will
+                            create solutions and new possibilities that will help you reach your goals. We all have a unique path
+                            we take through life&hellip; and sometimes we just need a little help along the way.
+                        </p>
+                    </article>
+
+                </section>
+
+                <section class="sidebar">
+
+                    <article class="side-text video">
+                        <div>
+                            <!-- Start SimplePractice Appointment-Request Widget Embed Code -->
+                            <div class="spwidget-button-wrapper"><a href="https://journeys-christian-counseling.clientsecure.me" class="spwidget-button"
+                                data-spwidget-scope-id="f08a52e2-d87e-4fbd-b2b0-9583ed9d9dc8"
+                                data-spwidget-scope-uri="journeys-christian-counseling"
+                                data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b"
+                                data-spwidget-scope-global data-spwidget-autobind>
+                                Click To Make An Appointment
+                            </a></div>
+                            <script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js"></script>
+                            <!-- End SimplePractice Appointment-Request Widget Embed Code -->
+                        </div>
+                        <video controls>
+                            <source src="videos/JourneysIntroCheryl.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+                            <source src="videos/JourneysIntroCheryl.webm" type='video/webm; codecs="vp8, vorbis"' />
+                        </video>
+                        <h2>Cheryl Arens, M.Ed., LPC</h2>
+                    </article>
+
+                    <article class="side-text side-text">
+                        <h2>Newletters</h2>
+                        <a href="newsletter.html"><img src="images/newsletter.jpg" alt="Newsletters" /></a>
+                        <p><a href="newsletter.html">Check out Journeys' Newsletters!</a></p>
+                    </article>
+
+                </section>
+
+            </section>
             <div class="clear"></div>
-          </article>
-
-          <div class="clear"></div>
-
-          <article class="main-text">
-            <h2>Welcome!</h2>
-            <p>At Journeys Christian Counseling our goal is to provide a safe and supportive place for individuals,
-              couples, and families to find hope and healing. You might be looking for extra support and guidance
-              through a challenging situation or are ready to take steps in a new direction. The first thing we'll
-              do is listen without judgment. Then, we'll walk alongside of you on your journey. Together we will
-              create solutions and new possibilities that will help you reach your goals. We all have a unique path
-              we take through life&hellip; and sometimes we just need a little help along the way.
-            </p>
-          </article>
 
         </section>
-
-      </section>
-      <div class="clear"></div>
-    </section>
-  </form>
+    </div>
 </body>
 
 </html>
