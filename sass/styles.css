@@ -326,6 +326,7 @@ figure.left {
   border-color: #5f3f27;
   border-style: solid;
   border-width: 0px 5px 5px 5px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -372,7 +373,10 @@ figure.left {
   margin: 0.2em 0;
   text-align: right;
 }
-.header nav {
+
+/* Navigation
+*****************/
+.navigation {
   background: transparent;
   border: 0;
   display: flex;
@@ -386,42 +390,34 @@ figure.left {
   padding: 0;
   width: 100%;
 }
-.header nav .nav-item {
+.navigation .nav-item {
   display: flex;
   margin: 0;
 }
-.header nav .nav-item a:link,
-.header nav .nav-item a:visited {
+.navigation .nav-item a:link,
+.navigation .nav-item a:visited {
   color: #fbe3c9;
   display: inline-block;
   height: 30px;
   padding: 3px;
   text-decoration: none;
 }
-.header nav .nav-item a:active,
-.header nav .nav-item .active a:link,
-.header nav .nav-item .active a:visited {
+.navigation .nav-item a:active,
+.navigation .nav-item .active a:link,
+.navigation .nav-item .active a:visited {
   background: #C74451;
   text-shadow: none !important;
   box-shadow: none !important;
 }
-.header nav .nav-item a:hover {
+.navigation .nav-item a:hover {
   border-radius: 5px;
   box-shadow: inset -2px -2px 2px #888, inset 2px 2px 2px #ccc;
 }
-.header nav .nav-item a.current {
+.navigation .nav-item a.current {
   background-color: #a05929;
   border-radius: 5px;
   box-shadow: inset 2px 2px 2px #ccc, inset -2px -2px 2px #888;
   text-shadow: 1px 1px 1px #999;
-}
-
-/*
-  Breadcrumbs
-*****************/
-.breadcrumbs {
-  font-size: 0.8em;
-  margin-bottom: 12px;
 }
 
 /*
@@ -432,11 +428,16 @@ figure.left {
   border-color: #5f3f27;
   border-style: solid;
   border-width: 5px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   height: auto;
   margin-bottom: 2em;
   overflow: hidden;
+  width: 100%;
+  /*
+  Home Page
+  *****************/
 }
 .body .sidenav {
   background-color: #fbe3c9;
@@ -460,48 +461,21 @@ figure.left {
   text-align: left;
   text-decoration: none;
 }
-
-/*
-  Home Page
-*****************/
-.home-page {
+.body .home-page {
   border: 0;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /*
+  Home Page Sidebar
+  *****************/
 }
-
-.home-page h2 {
-  font-size: 1.75em;
-  margin-bottom: 0;
-  padding: 3px;
-}
-
-#content .main {
+.body .home-page .main {
   height: 100%;
   float: left;
   width: 644px;
 }
-
-#content .main .main-text {
-  margin-top: 4px;
-  border-color: #5f3f27;
-  border-style: solid;
-  border-width: 3px;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-}
-
-#content .main .main-text h2 {
-  width: 632px;
-}
-
-#content .main .main-text p {
-  font-size: 1.25em;
-  padding: 18px 5px;
-}
-
-#content .main .rotating-banner {
+.body .home-page .main .rotating-banner {
   display: block;
   height: 326px;
   margin: 0;
@@ -509,14 +483,12 @@ figure.left {
   position: relative;
   width: 644px;
 }
-
-#content .main .rotating-banner img {
+.body .home-page .main .rotating-banner img {
   display: none;
   position: absolute;
   top: 0;
 }
-
-#content .main .rotating-banner .rotator-overlay {
+.body .home-page .main .rotating-banner .rotator-overlay {
   background: transparent;
   background: rgba(255, 255, 255, 0.6);
   font-size: 1.92em;
@@ -530,95 +502,85 @@ figure.left {
   width: 177px;
   z-index: 1000;
 }
-
-/*
-  Home Page Sidebar
-*****************/
-#content section.sidebar {
-  float: right;
-  height: 100%;
-  width: 308px;
-}
-
-#content .sidebar .side-text {
+.body .home-page .main .main-text {
   border-color: #5f3f27;
   border-style: solid;
   border-width: 3px;
   border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  margin-top: 4px;
-  text-align: center;
+  box-sizing: border-box;
+  margin: 4px;
 }
-
-#content .sidebar .side-text h2 {
-  width: 296px;
+.body .home-page .main .main-text h2 {
+  box-sizing: border-box;
+  width: 100%;
 }
-
-#content .sidebar .side-text div {
-  padding: 0.3em;
+.body .home-page .main .main-text p {
+  font-size: 1.25em;
+  padding: 18px 5px;
 }
-
-#content .sidebar .side-text p {
-  padding: 0.3em;
-  text-align: center;
+.body .home-page section.sidebar {
+  box-sizing: border-box;
+  float: right;
+  height: 100%;
+  width: 308px;
 }
-
-#content .sidebar .side-text img {
-  height: 268px;
-  margin: 0.1em auto;
-  padding: 0.1em auto;
-  width: 280px;
+.body .home-page section.sidebar .video {
+  border-color: #5f3f27;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin: 4px;
 }
-
-#content .sidebar .video {
-  margin-top: 4px;
-  margin-bottom: 8px;
-}
-
-#content .sidebar .video h2 {
-  font-size: 1.5em;
-  text-align: center;
-}
-
-#content .sidebar .video video {
-  height: 168px;
-  width: 302px;
-}
-
-#content .sidebar .video div {
+.body .home-page section.sidebar .video h2 {
   border: 0;
+  box-sizing: border-box;
+  font-size: 25px;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+.body .home-page section.sidebar .video video {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+}
+.body .home-page section.sidebar .video div {
+  border: 0;
+  box-sizing: border-box;
   margin: 0;
   padding: 5px 0;
   text-align: center;
 }
-
-#content .sidebar .video input {
+.body .home-page section.sidebar .video input {
   font-size: 1.1em;
   font-weight: bold;
   height: 2em;
 }
-
-#content .sidebar .video-title {
-  padding-bottom: 1.5em;
+.body .home-page section.sidebar .newsletter {
+  border-color: #5f3f27;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin: 4px;
   text-align: center;
 }
-
-#content .sidebar .video-title .name {
-  font-size: 1.1em;
-  font-weight: bold;
+.body .home-page section.sidebar .newsletter h2 {
+  box-sizing: border-box;
+  font-size: 25px;
+  width: 100%;
 }
-
-#content .sidebar div.social {
-  border-width: 0;
-  display: block;
-  margin: 8px auto 5px auto;
+.body .home-page section.sidebar .newsletter img {
+  border: 0;
+  margin: 0;
   padding: 0;
-  text-align: center;
+  width: 100%;
 }
-
-#content .sidebar div.social a {
-  margin: 0 24px;
+.body .home-page section.sidebar .newsletter p {
+  padding: 0.3em;
+  text-align: center;
 }
 
 ul.social-media-links li {

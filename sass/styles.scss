@@ -292,6 +292,7 @@ figure.left {
         border-color: #5f3f27;
         border-style: solid;
         border-width: 0px 5px 5px 5px;
+        box-sizing: border-box;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -351,7 +352,7 @@ figure.left {
 /* Navigation
 *****************/
 .navigation {
-    background: #00ff00;
+    background: transparent;
     border: 0;
     display: flex;
     flex-direction: row;
@@ -407,11 +408,13 @@ figure.left {
     border-color: $border-color-dark;
     border-style: solid;
     border-width: 5px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     height: auto;
     margin-bottom: 2em;
     overflow: hidden;
+    width: 100%;
 
     .sidenav {
         background-color: $background-color-card;
@@ -438,170 +441,155 @@ figure.left {
         }
     }
 
+    /*
+    Home Page
+    *****************/
+
+    .home-page {
+        border: 0;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+        .main {
+            height: 100%;
+            float: left;
+            width: 644px;
+
+
+            .rotating-banner {
+                display: block;
+                height: 326px;
+                margin: 0;
+                padding: 0;
+                position: relative;
+                width: 644px;
+
+                img {
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                }
+
+                .rotator-overlay {
+                    background: transparent;
+                    background: rgba(255, 255, 255, 0.6);
+                    font-size: 1.92em;
+                    height: 216px;
+                    left: 440px;
+                    line-height: 1.1em;
+                    padding: 55px 5px;
+                    position: absolute;
+                    text-align: center;
+                    top: 0;
+                    width: 177px;
+                    z-index: 1000;
+                }
+            }
+
+            .main-text {
+                border-color: $background-color-title;
+                border-style: solid;
+                border-width: 3px;
+                border-radius: 3px;
+                box-sizing: border-box;
+                margin: 4px;
+
+                h2 {
+                    box-sizing: border-box;
+                    width: 100%;
+                }
+
+                p {
+                    font-size: 1.25em;
+                    padding: 18px 5px;
+                }
+            }
+        }
+
+
+        /*
+        Home Page Sidebar
+        *****************/
+
+        section.sidebar {
+            box-sizing: border-box;
+            float: right;
+            height: 100%;
+            width: 308px;
+
+            .video {
+                border-color: $background-color-title;
+                border-style: solid;
+                border-width: 3px;
+                border-radius: 3px;
+                box-sizing: border-box;
+                margin: 4px;
+
+                h2 {
+                    border: 0;
+                    box-sizing: border-box;
+                    font-size: 25px;
+                    margin: 0;
+                    text-align: center;
+                    width: 100%;
+                }
+
+                video {
+                    border: 0;
+                    box-sizing: border-box;
+                    margin: 0;
+                    width: 100%;
+                }
+
+                div {
+                    border: 0;
+                    box-sizing: border-box;
+                    margin: 0;
+                    padding: 5px 0;
+                    text-align: center;
+                }
+
+                input {
+                    font-size: 1.1em;
+                    font-weight: bold;
+                    height: 2em;
+                }
+            }
+
+            .newsletter {
+                border-color: $background-color-title;
+                border-style: solid;
+                border-width: 3px;
+                border-radius: 3px;
+                box-sizing: border-box;
+                margin: 4px;
+                text-align: center;
+
+                h2 {
+                    box-sizing: border-box;
+                    font-size: 25px;
+                    width: 100%;
+                }
+
+                img {
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                }
+
+                p {
+                    padding: .3em;
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
 
-/*
-  Home Page
-*****************/
-
-.home-page {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-.home-page h2 {
-    font-size: 1.75em;
-    margin-bottom: 0;
-    padding: 3px;
-}
-
-#content .main {
-    height: 100%;
-    float: left;
-    width: 644px;
-}
-
-#content .main .main-text {
-    margin-top: 4px;
-    border-color: $background-color-title;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-}
-
-#content .main .main-text h2 {
-    width: 632px;
-}
-
-#content .main .main-text p {
-    font-size: 1.25em;
-    padding: 18px 5px;
-}
-
-#content .main .rotating-banner {
-    display: block;
-    height: 326px;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    width: 644px;
-}
-
-#content .main .rotating-banner img {
-    display: none;
-    position: absolute;
-    top: 0;
-}
-
-#content .main .rotating-banner .rotator-overlay {
-    background: transparent;
-    background: rgba(255, 255, 255, 0.6);
-    font-size: 1.92em;
-    height: 216px;
-    left: 440px;
-    line-height: 1.1em;
-    padding: 55px 5px;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 177px;
-    z-index: 1000;
-}
 
 
-/*
-  Home Page Sidebar
-*****************/
-
-#content section.sidebar {
-    float: right;
-    height: 100%;
-    width: 308px;
-}
-
-#content .sidebar .side-text {
-    border-color: $background-color-title;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    margin-top: 4px;
-    text-align: center;
-}
-
-#content .sidebar .side-text h2 {
-    width: 296px;
-}
-
-#content .sidebar .side-text div {
-    padding: .3em;
-}
-
-#content .sidebar .side-text p {
-    padding: .3em;
-    text-align: center;
-}
-
-#content .sidebar .side-text img {
-    height: 268px;
-    margin: .1em auto;
-    padding: .1em auto;
-    width: 280px;
-}
-
-#content .sidebar .video {
-    margin-top: 4px;
-    margin-bottom: 8px;
-}
-
-#content .sidebar .video h2 {
-    font-size: 1.5em;
-    text-align: center;
-}
-
-#content .sidebar .video video {
-    height: 168px;
-    width: 302px;
-}
-
-#content .sidebar .video div {
-    border: 0;
-    margin: 0;
-    padding: 5px 0;
-    text-align: center;
-}
-
-#content .sidebar .video input {
-    font-size: 1.1em;
-    font-weight: bold;
-    height: 2em;
-}
-
-#content .sidebar .video-title {
-    padding-bottom: 1.5em;
-    text-align: center;
-}
-
-#content .sidebar .video-title .name {
-    font-size: 1.1em;
-    font-weight: bold;
-}
-
-#content .sidebar div.social {
-    border-width: 0;
-    display: block;
-    margin: 8px auto 5px auto;
-    padding: 0;
-    text-align: center;
-}
-
-#content .sidebar div.social a {
-    margin: 0 24px;
-}
 
 ul.social-media-links li {
     display: block;
