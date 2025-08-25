@@ -13,7 +13,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+figure, figcaption, footer, header, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -26,7 +26,7 @@ time, mark, audio, video {
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, menu, nav, section {
   display: block;
 }
 
@@ -313,46 +313,32 @@ figure.left {
   width: 100%;
   min-width: 320px;
 }
-@media screen and (min-width: 600px) {
-  .header .header-small-screen {
-    display: none;
-  }
-}
 .header .header-small-screen a {
   display: flex;
 }
 .header .header-large-screen {
-  background-color: transparent;
-  border: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-}
-@media screen and (max-width: 600px) {
-  .header .header-large-screen {
-    display: none;
-  }
-}
-.header .header-large-screen hgroup {
   background: #ffffff;
   border-color: #5f3f27;
   border-style: solid;
-  border-width: 0px 3px 5px 3px;
+  border-width: 0px 5px 5px 5px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  height: 138px;
   justify-content: space-between;
   margin: 0 auto;
   padding: 12px;
   width: 100%;
 }
-.header .header-large-screen hgroup h1 a,
-.header .header-large-screen hgroup h1 a:link,
-.header .header-large-screen hgroup h1 a:visited,
-.header .header-large-screen hgroup h1 a:hover,
-.header .header-large-screen hgroup h1 a:active {
+.header .header-large-screen h1 {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.header .header-large-screen h1 a,
+.header .header-large-screen h1 a:link,
+.header .header-large-screen h1 a:visited,
+.header .header-large-screen h1 a:hover,
+.header .header-large-screen h1 a:active {
   transition: none;
   -webkit-transition: none;
   -moz-transition: none;
@@ -372,53 +358,67 @@ figure.left {
   text-shadow: none;
   width: 215px;
 }
-.header .header-large-screen hgroup .address {
+.header .header-large-screen .address {
   display: block;
   float: right;
-  font-size: 1.15em;
+  font-size: 1.2em;
   font-weight: normal;
   font-style: normal;
   line-height: 1.3em;
   margin: 0.2em 0;
   text-align: right;
 }
-.header .header-large-screen nav {
+@media screen and (min-width: 600px) {
+  .header .header-small-screen {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header .header-large-screen {
+    display: none;
+  }
+}
+
+/* Nav
+*****************/
+nav {
   background: transparent;
   border: 0;
   display: flex;
   flex-direction: row;
-  font-size: 1.45em;
+  font-size: 1.6em;
   font-weight: lighter;
   height: 40px;
-  justify-content: space-evenly;
+  justify-content: space-around;
   line-height: 30px;
-  margin: 0.2em auto;
+  margin: 0.2em 0;
   padding: 0;
+  width: 100%;
 }
-.header .header-large-screen nav .nav-item {
+nav .nav-item {
   display: flex;
   margin: 0;
 }
-.header .header-large-screen nav .nav-item a:link,
-.header .header-large-screen nav .nav-item a:visited {
+nav .nav-item a:link,
+nav .nav-item a:visited {
   color: #fbe3c9;
   display: inline-block;
   height: 30px;
   padding: 3px;
   text-decoration: none;
 }
-.header .header-large-screen nav .nav-item a:active,
-.header .header-large-screen nav .nav-item .active a:link,
-.header .header-large-screen nav .nav-item .active a:visited {
+nav .nav-item a:active,
+nav .nav-item .active a:link,
+nav .nav-item .active a:visited {
   background: #C74451;
   text-shadow: none !important;
   box-shadow: none !important;
 }
-.header .header-large-screen nav .nav-item a:hover {
+nav .nav-item a:hover {
   border-radius: 5px;
   box-shadow: inset -2px -2px 2px #888, inset 2px 2px 2px #ccc;
 }
-.header .header-large-screen nav .nav-item a.current {
+nav .nav-item a.current {
   background-color: #a05929;
   border-radius: 5px;
   box-shadow: inset 2px 2px 2px #ccc, inset -2px -2px 2px #888;
@@ -441,12 +441,14 @@ figure.left {
   border-color: #5f3f27;
   border-style: solid;
   border-width: 5px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   height: auto;
   margin-bottom: 2em;
   overflow: hidden;
   padding: 0 5px;
+  width: 100%;
 }
 .body .sidenav {
   background-color: #fbe3c9;
@@ -507,7 +509,7 @@ figure.left {
 }
 
 #content .main .main-text p {
-  font-size: 1.25em;
+  font-size: 18px;
   padding: 18px 5px;
 }
 

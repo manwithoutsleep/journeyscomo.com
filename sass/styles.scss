@@ -1,6 +1,6 @@
 /* Imports */
-@import './variables';
-@import './reset';
+@use 'variables' as *;
+@use 'reset';
 
 $app-navigation-header-height-small-screen: 60px;
 
@@ -306,7 +306,7 @@ figure.left {
             background: $background-color-site;
             border-color: $border-color-dark;
             border-style: solid;
-            border-width: 0px 3px 5px 3px;
+            border-width: 0px 5px 5px 5px;
             display: flex;
             flex-direction: row;
             height: 138px;
@@ -362,10 +362,11 @@ figure.left {
             font-size: 1.45em;
             font-weight: lighter;
             height: 40px;
-            justify-content: space-evenly;
+            justify-content: space-between;
             line-height: 30px;
-            margin: .2em auto;
+            margin: .2em 0;
             padding: 0;
+            width: 100%;
     
             .nav-item {
                 display: flex;
