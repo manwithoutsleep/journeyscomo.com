@@ -13,7 +13,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, 
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -26,7 +26,7 @@ time, mark, audio, video {
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, menu, nav, section {
+footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
@@ -313,6 +313,11 @@ figure.left {
   width: 100%;
   min-width: 320px;
 }
+@media screen and (min-width: 600px) {
+  .header .header-small-screen {
+    display: none;
+  }
+}
 .header .header-small-screen a {
   display: flex;
 }
@@ -321,7 +326,6 @@ figure.left {
   border-color: #5f3f27;
   border-style: solid;
   border-width: 0px 5px 5px 5px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -329,10 +333,10 @@ figure.left {
   padding: 12px;
   width: 100%;
 }
-.header .header-large-screen h1 {
-  border: 0;
-  margin: 0;
-  padding: 0;
+@media screen and (max-width: 600px) {
+  .header .header-large-screen {
+    display: none;
+  }
 }
 .header .header-large-screen h1 a,
 .header .header-large-screen h1 a:link,
@@ -361,32 +365,19 @@ figure.left {
 .header .header-large-screen .address {
   display: block;
   float: right;
-  font-size: 1.2em;
+  font-size: 1.15em;
   font-weight: normal;
   font-style: normal;
   line-height: 1.3em;
   margin: 0.2em 0;
   text-align: right;
 }
-@media screen and (min-width: 600px) {
-  .header .header-small-screen {
-    display: none;
-  }
-}
-@media screen and (max-width: 600px) {
-  .header .header-large-screen {
-    display: none;
-  }
-}
-
-/* Nav
-*****************/
-nav {
+.header nav {
   background: transparent;
   border: 0;
   display: flex;
   flex-direction: row;
-  font-size: 1.6em;
+  font-size: 1.45em;
   font-weight: lighter;
   height: 40px;
   justify-content: space-around;
@@ -395,30 +386,30 @@ nav {
   padding: 0;
   width: 100%;
 }
-nav .nav-item {
+.header nav .nav-item {
   display: flex;
   margin: 0;
 }
-nav .nav-item a:link,
-nav .nav-item a:visited {
+.header nav .nav-item a:link,
+.header nav .nav-item a:visited {
   color: #fbe3c9;
   display: inline-block;
   height: 30px;
   padding: 3px;
   text-decoration: none;
 }
-nav .nav-item a:active,
-nav .nav-item .active a:link,
-nav .nav-item .active a:visited {
+.header nav .nav-item a:active,
+.header nav .nav-item .active a:link,
+.header nav .nav-item .active a:visited {
   background: #C74451;
   text-shadow: none !important;
   box-shadow: none !important;
 }
-nav .nav-item a:hover {
+.header nav .nav-item a:hover {
   border-radius: 5px;
   box-shadow: inset -2px -2px 2px #888, inset 2px 2px 2px #ccc;
 }
-nav .nav-item a.current {
+.header nav .nav-item a.current {
   background-color: #a05929;
   border-radius: 5px;
   box-shadow: inset 2px 2px 2px #ccc, inset -2px -2px 2px #888;
@@ -441,14 +432,11 @@ nav .nav-item a.current {
   border-color: #5f3f27;
   border-style: solid;
   border-width: 5px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   height: auto;
   margin-bottom: 2em;
   overflow: hidden;
-  padding: 0 5px;
-  width: 100%;
 }
 .body .sidenav {
   background-color: #fbe3c9;
@@ -509,7 +497,7 @@ nav .nav-item a.current {
 }
 
 #content .main .main-text p {
-  font-size: 18px;
+  font-size: 1.25em;
   padding: 18px 5px;
 }
 
@@ -851,6 +839,10 @@ ul.social-media-links li {
 /*
   FAQ
 *****************/
+#content .faq {
+  padding: 0 5px;
+}
+
 #content .faq h3 {
   color: #803909;
   font-style: italic;
