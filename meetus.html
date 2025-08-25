@@ -2,68 +2,72 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-  <title>Meet Us | Journeys Christian Counseling</title>
+    <title>Meet Us | Journeys Christian Counseling</title>
 
-  <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans' />
-  <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' />
-  <link rel='stylesheet' type='text/css' href='css/main.css' />
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans' />
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' />
+    <link rel='stylesheet' type='text/css' href='sass/styles.css' />
 
-  <script type="text/javascript" src="/js/welcome.js"></script>
+    <script type="text/javascript" src="/js/welcome.js"></script>
 </head>
 
 <body id="index" class="home">
-  <form id="form1">
-    <header id="banner" class="body">
-      <hgroup>
-        <h1><a href="/">Journey's Christian Counseling</a></h1>
-        <div class="address">
-          Journey's Christian Counseling<br />
-          601 West Nifong, Bldg 5A, Columbia, MO 65203<br />
-          (573) 355-0263
-          </h2>
-          <div class="clear"></div>
-      </hgroup>
-      <nav>
-        <ul>
-          <li><a href="meetus.html" class="current">Meet Us</a></li>
-          <li><a href="ourservices.html">Our Services</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="gettingstarted.html">Getting Started</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="contactus.html">Contact Us</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <section id="content" class="body">
-      
-      <h2>Meet Us</h2>
-
-      <section class="meet-us-page">
-
-        <section>
-          <div>
-            <a href="meetus-Cheryl.html"><img src="images/Cheryl_Head_182x235.jpg" alt="Cheryl Arens, M.Ed, LPC" /></a>
-            <div>
-              <p>Hi, I'm Cheryl.</p>
-              <p>
-                As a counselor, I hope to walk alongside of people as they address a variety of challenges throughout
-                life. I look forward to joining you on your journey because meaningful change and healing can make a
-                significant difference in the quality of your life and relationships.
-              </p>
-              <p>
-                Cheryl Arens, M.Ed., LPC<br />
-                Licensed Professional Counselor
-              </p>
-              <a href="meetus-Cheryl.html" class="read-more-link">Read More&hellip;</a>
+    <div class="main-wrapper">
+        <header class="header">
+            <div class="header-small-screen">
+                <button mat-icon-button class="menu-button">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <a routerLink="/"><img src="/assets/site-images/CompassLogoSmall.png"
+                        alt="Compass Christian Counseling"></a>
             </div>
-          </div>
-        </section>
+            <div class="header-large-screen">
+                <h1><a href="/">Journey's Christian Counseling</a></h1>
+                <div class="address">
+                    Journey's Christian Counseling<br />
+                    601 West Nifong, Bldg 5A, Columbia, MO 65203<br />
+                    (573) 355-0263
+                </div>
+            </div>
+        </header>
 
-      </section>
-      <div class="clear"></div>
-    </section>
-  </form>
+        <div class="navigation">
+            <div class="nav-item"><a href="meetus.html" class="current">Meet Us</a></div>
+            <div class="nav-item"><a href="ourservices.html">Our Services</a></div>
+            <div class="nav-item"><a href="faq.html">FAQ</a></div>
+            <div class="nav-item"><a href="gettingstarted.html">Getting Started</a></div>
+            <div class="nav-item"><a href="resources.html">Resources</a></div>
+            <div class="nav-item"><a href="contactus.html">Contact Us</a></div>
+        </div>
+
+        <section class="body">
+
+            <h2>Meet Us</h2>
+
+            <section class="meet-us-page">
+
+                <section>
+                    <div>
+                        <a href="meetus-Cheryl.html"><img src="images/Cheryl_Head_182x235.jpg" alt="Cheryl Arens, M.Ed, LPC" /></a>
+                        <div>
+                            <p>Hi, I'm Cheryl.</p>
+                            <p>As a counselor, I hope to walk alongside of people as they address a variety of
+                                challenges throughout life. I look forward to joining you on your journey because
+                                meaningful change and healing can make a significant difference in the quality of your
+                                life and relationships.</p>
+                            <p>
+                                Cheryl Arens, M.Ed., LPC<br />
+                                Licensed Professional Counselor
+                            </p>
+                            <a href="meetus-Cheryl.html" class="read-more-link">Read More&hellip;</a>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+            <div class="clear"></div>
+        </section>
+    </div>
 </body>
 
 </html>

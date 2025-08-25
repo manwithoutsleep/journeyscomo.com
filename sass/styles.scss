@@ -14,8 +14,7 @@ body {
     background: $background-color-margin;
     border: 0;
     color: $background-color-title;
-    font-size: 90%;
-    /* Base font size: 12px */
+    font-size: 14px;
     font-family: 'Open Sans', 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     height: 100%;
     line-height: 1.429;
@@ -38,6 +37,7 @@ form {
 h2 {
     background-color: $background-color-title;
     color: $font-color-light;
+    font-size: 25px;
     margin-bottom: 5px;
     padding: 6px;
     white-space: nowrap;
@@ -46,6 +46,7 @@ h2 {
 
 h3 {
     color: $font-color-mid;
+    font-size: 18px;
     font-style: italic;
     font-weight: bold;
 }
@@ -416,6 +417,14 @@ figure.left {
     overflow: hidden;
     width: 100%;
 
+    h2 {
+        border: 0;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
     .sidenav {
         background-color: $background-color-card;
         display: none;
@@ -586,143 +595,154 @@ figure.left {
             }
         }
     }
-}
+
+    /*
+    FAQ
+    *****************/
+
+    .faq {
+        padding: 0 5px;
+
+        h3 {
+            color: $font-color-mid;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        ul {
+            margin-top: 0;
+        }
+    }
+
+    /*
+    Meet Us Page
+    *****************/
+
+    .meet-us-page {
+        text-align: center;
+        width: 100%;
+
+        section {
+            border: 0;
+            display: inline-block;
+            margin: 12px;
+            padding: 0;
+            width: 431px;
+
+            div {
+                background-color: $font-color-light;
+                border-color: $background-color-title;
+                border-style: solid;
+                border-width: 3px;
+                border-radius: 3px;
+                display: block;
+                height: 300px;
+                margin: 0;
+                padding: 0;
+                width: 431px;
+
+                div {
+                    background-color: transparent;
+                    border: 0;
+                    display: block;
+                    float: left;
+                    font-size: 1em;
+                    margin: 0;
+                    padding: 3px;
+                    width: 229px;
+
+                    p {
+
+                        text-align: left;
+                    }
+                }
+
+                a img {
+                    border-color: $font-color-light;
+                    border-radius: 15px;
+                    border-style: solid;
+                    border-width: 3px;
+                    float: left;
+                    height: 235px;
+                    margin: 3px 0;
+                    padding: 0;
+                    width: 182px;
+                }
+
+                div a.read-more-link {
+                    display: block;
+                    margin-top: -1em;
+                    padding-top: 0;
+                    text-align: right;
+                }
+            }
+        }
+    }
 
 
 
+    /*
+    Meet One Of Us Page
+    *****************/
 
-ul.social-media-links li {
-    display: block;
-    float: left;
-    font-size: .8em;
-    padding-right: 3px;
-}
+    .meet-one {
+        border: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
 
-/*
-  Meet Us Page
-*****************/
+        figure {
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+            width: 241px;
 
-#content .meet-us-page {
-    text-align: center;
-    width: 100%;
-}
+            div {
+                background-color: $background-color-margin;
+                border: 0;
+                box-sizing: border-box;
+                height: 296px;
+                left: 0;
+                margin: 0;
+                padding: 0;
+                position: relative;
+                top: 0;
+                width: 241px;
 
-#content .meet-us-page section {
-    border: 0;
-    display: inline-block;
-    height: 245px;
-    margin: 12px;
-    padding: 0;
-    width: 431px;
-}
+                img {
+                    border-color: $border-color-mid;
+                    border-radius: 25px;
+                    border-style: solid;
+                    border-width: 10px;
+                    height: 276px;
+                    width: 221px;
+                }
+            }
 
-#content .meet-us-page section div {
-    background-color: $font-color-light;
-    border-color: $background-color-title;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    display: block;
-    height: 245px;
-    margin: 0;
-    padding: 0;
-    width: 431px;
+            figcaption {
+                padding-left: 5px;
+            }
+        }
 
-}
+        .text-content {
+            background-color: $font-color-light;
+            border-color: $background-color-title;
+            border-style: solid;
+            border-width: 5px;
+            border-radius: 3px;
+            box-sizing: border-box;
+            margin: 5px;
+            padding: 5px;
+        }
 
-#content .meet-us-page section div div {
-    background-color: transparent;
-    border: 0;
-    display: block;
-    float: left;
-    font-size: .75em;
-    margin: 0;
-    padding: 3px;
-    width: 229px;
-}
-
-#content .meet-us-page section div a img {
-    border-color: $font-color-light;
-    border-radius: 15px;
-    border-style: solid;
-    border-width: 3px;
-    float: left;
-    height: 235px;
-    margin: 3px 0;
-    padding: 0;
-    width: 182px;
-}
-
-#content .meet-us-page section div div p {
-    text-align: left;
-}
-
-#content .meet-us-page section div div a.read-more-link {
-    display: block;
-    margin-top: -1em;
-    padding-top: 0;
-    text-align: right;
-}
-
-/*
-  Meet One Of Us Page
-*****************/
-
-.meet-one {
-    margin-top: -2em;
-    position: relative;
-}
-
-.meet-one figure {
-    position: absolute;
-    top: 30px;
-    width: 233px;
-    z-index: 1000;
-}
-
-.meet-one figure div {
-    background-color: $background-color-margin;
-    border: 0;
-    height: 296px;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    top: 0;
-    width: 241px;
-}
-
-.meet-one figure div img {
-    border-color: $border-color-mid;
-    border-radius: 25px;
-    border-style: solid;
-    border-width: 10px;
-    height: 276px;
-    width: 221px;
-}
-
-.meet-one figure figcaption {
-    font-size: .9em;
-    padding-left: 5px;
-}
-
-.meet-one div {
-    background-color: $font-color-light;
-    border-color: $background-color-title;
-    border-style: solid;
-    border-width: 5px;
-    border-radius: 3px;
-    left: 220px;
-    padding: 5px 5px 5px 25px;
-    position: relative;
-    top: 10px;
-    width: 700px;
-}
-
-.meet-one div.clear {
-    position: relative;
+        div.clear {
+            position: relative;
+        }
+    }
 }
 
 /*
@@ -808,25 +828,6 @@ ul.social-media-links li {
     margin: 2px 0 5px 0;
     padding: 5px;
     width: auto;
-}
-
-/*
-  FAQ
-*****************/
-
-#content .faq {
-    padding: 0 5px;
-}
-
-#content .faq h3 {
-    color: $font-color-mid;
-    font-style: italic;
-    font-weight: bold;
-    margin-bottom: 3px;
-}
-
-#content .faq ul {
-    margin-top: 0;
 }
 
 /*
