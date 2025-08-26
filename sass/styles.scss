@@ -681,8 +681,6 @@ figure.left {
         }
     }
 
-
-
     /*
     Meet One Of Us Page
     *****************/
@@ -741,6 +739,97 @@ figure.left {
 
         div.clear {
             position: relative;
+        }
+    }
+
+    /*
+    Contact Us
+    *****************/
+    .contactus {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 15px 5px;
+
+        .left-column {
+            flex: 1;
+            min-width: 400px;
+            padding-right: 15px;
+
+            h2 {
+                width: 280px;
+            }
+
+            article.counselor {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                margin-bottom: 20px;
+
+                img {
+                    border: 0;
+                    border-radius: 3px;
+                    margin: 0 10px 10px 0;
+                    padding: 0;
+                }
+
+                .counselor-info {
+                    flex: 1;
+                    min-width: 200px;
+                }
+
+                h3 {
+                    padding-top: 0;
+                }
+
+                p.phone {
+                    font-weight: bold;
+                }
+
+                .spwidget-button,
+                .spwidget-button:link,
+                .spwidget-button:visited,
+                .spwidget-button:hover,
+                .spwidget-button:active {
+                    font-family: Arial;
+                    font-size: 13px;
+                    font-weight: normal;
+                    height: 15px;
+                    margin: 4px 0px;
+                    padding: 2px 6px;
+                    text-align: center;
+                    width: 199px;
+                }
+
+                .spwidget-button-wrapper {
+                    text-align: left;
+                }
+            }
+        }
+
+        .right-column {
+            flex: 1;
+            min-width: 400px;
+            margin: 5px;
+
+            .map-container {
+                border-color: $background-color-title;
+                border-style: solid;
+                border-width: 3px;
+                border-radius: 3px;
+                height: 350px;
+                margin: 0 auto 16px;
+                width: 100%;
+                max-width: 500px;
+
+                .DivGMap {
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
         }
     }
 }
@@ -1003,99 +1092,7 @@ figure.left {
 }
 
 /*
-  Contact Us
-*****************/
-
-#content .contactus .left-column {
-    border: 0;
-    float: left;
-    margin: 0 10px 0 0;
-    padding: 0;
-    width: 442px;
-}
-
-#content .contactus .left-column h2 {
-    width: 280px;
-}
-
-#content .contactus .left-column article.counselor {}
-
-#content .contactus .left-column article.counselor img {
-    border: 0;
-    border-radius: 3px;
-    float: left;
-    margin: 0 6px 24px 0;
-    padding: 0;
-}
-
-#content .contactus .left-column article.counselor h3 {
-    float: none;
-    padding-top: 32px;
-}
-
-#content .contactus .left-column article.counselor p.phone {
-    font-weight: bold;
-}
-
-#content .contactus .left-column article.counselor p.email {}
-
-#content .contactus .right-column {
-    border: 0;
-    float: right;
-    margin: 0;
-    padding: 0;
-    width: 508px;
-}
-
-#content .contactus .right-column #clock {
-    border: 0;
-    border-radius: 5px;
-    float: right;
-    height: 220px;
-    margin: 0 0 4px 8px;
-    padding: 0;
-    width: 99px;
-}
-
-#content .contactus div.map-container {
-    border-color: $background-color-title;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 3px;
-    height: 350px;
-    margin: 0px 0px 16px auto;
-    width: 500px;
-    z-index: 1000;
-}
-
-#content .contactus div.map-container div.DivGMap {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    height: 350px;
-    width: 500px;
-    z-index: 1000;
-}
-
-#content .contactus div.map-container img {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    height: 282px;
-    width: 500px;
-}
-
-#content .contactus .JourneysInfoWindow {
-    font-size: .8em;
-    padding: 3px;
-}
-
-#content .contactus .JourneysInfoWindow h3 {
-    font-weight: bold;
-}
-
-/*
-  Contact Us
+  Sign Up
 *****************/
 
 #content .sign-up div.message {
