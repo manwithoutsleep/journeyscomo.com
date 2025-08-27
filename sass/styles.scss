@@ -753,12 +753,8 @@ figure.left {
 
         .left-column {
             flex: 1;
-            min-width: 400px;
+            max-width: 442px;
             padding-right: 15px;
-
-            h2 {
-                width: 280px;
-            }
 
             article.counselor {
                 display: flex;

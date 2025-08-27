@@ -726,11 +726,8 @@ figure.left {
 }
 .body .contactus .left-column {
   flex: 1;
-  min-width: 400px;
+  max-width: 442px;
   padding-right: 15px;
-}
-.body .contactus .left-column h2 {
-  width: 280px;
 }
 .body .contactus .left-column article.counselor {
   display: flex;
