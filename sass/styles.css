@@ -460,6 +460,9 @@ figure.left {
   /*
   Getting Started
   *****************/
+  /*
+  Our Services
+  *****************/
 }
 .body h2 {
   border: 0;
@@ -838,23 +841,18 @@ figure.left {
   font-weight: bold;
   margin-bottom: 3px;
 }
-
-/*
-  Our Services
-*****************/
-#content .ourservices .left-column {
-  border: 0;
-  float: left;
-  margin: 0 10px 0 0;
-  padding: 0;
-  width: 275px;
+.body .ourservices {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 5px;
 }
-
-#content .ourservices .left-column h2 {
-  width: auto;
+.body .ourservices .left-column {
+  flex: 0 0 275px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
 }
-
-#content .ourservices .left-column div {
+.body .ourservices .left-column div {
   background-color: #fbe3c9;
   border-color: #5f3f27;
   border-style: solid;
@@ -863,64 +861,41 @@ figure.left {
   line-height: 1.23em;
   margin: 0;
   padding: 5px;
-  width: auto;
 }
-
-#content .ourservices .left-column div p {
-  border: 0;
-  margin: 6px 0;
-  padding: 0;
+.body .ourservices figure {
+  flex: 0 0 239px;
+  margin: 0 0 10px 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-
-#content .ourservices figure {
-  background-color: #5f3f27;
-  border-color: #5f3f27;
-  border-style: solid;
-  border-width: 5px;
-  border-radius: 0;
-  float: left;
-  margin: 38px 0 0 0;
-  padding: 0;
-  width: 239px;
-}
-
-#content .ourservices figure img {
-  border-color: #5f3f27;
-  border-style: solid;
-  border-width: 6px;
+.body .ourservices figure img {
+  width: 100%;
+  height: auto;
   border-radius: 15px;
-  display: block;
-  height: 164px;
-  margin: 0;
-  padding: 0;
-  width: 227px;
 }
-
-#content .ourservices .right-column {
-  color: #fbe3c9;
-  float: right;
-  padding: 0 3px;
-  width: 408px;
+.body .ourservices .right-column {
+  flex: 1;
+  min-width: 300px;
+  padding-left: 10px;
+  box-sizing: border-box;
 }
-
-#content .ourservices .right-column h3 {
+.body .ourservices .right-column h3 {
   background-color: #5f3f27;
   color: #fbe3c9;
   font-size: 1.3em;
   font-style: normal;
   font-weight: normal;
-  margin: 0;
+  margin: 0 0 10px 0;
   padding: 6px;
   text-align: center;
-  width: auto;
 }
-
-#content .ourservices .right-column p {
+.body .ourservices .right-column p {
   color: #5f3f27;
   line-height: 1.23em;
-  margin: 2px 0 5px 0;
-  padding: 5px;
-  width: auto;
+  margin-bottom: 20px;
 }
 
 /*

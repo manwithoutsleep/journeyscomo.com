@@ -4,43 +4,47 @@
 <head>
   <title>Our Services | Journeys Christian Counseling</title>
 
+  <link rel="stylesheet" type='text/css' href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans' />
   <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' />
-  <link rel='stylesheet' type='text/css' href='css/main.css' />
+  <link rel='stylesheet' type='text/css' href='sass/styles.css' />
 
   <script type="text/javascript" src="/js/welcome.js"></script>
 </head>
 
 <body id="index" class="home">
-  <form id="form1">
-    <header id="banner" class="body">
-      <hgroup>
-        <h1><a href="/">Journey's Christian Counseling</a></h1>
+  <div class="main-wrapper">
+    <header class="header">
+      <div class="header-small-screen">
+        <button mat-icon-button class="menu-button">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <a href="index.html"><img src="images/JourneysLogo.png" alt="Journeys Christian Counseling"></a>
+      </div>
+      <div class="header-large-screen">
+        <h1><a href="index.html">Journey's Christian Counseling</a></h1>
         <div class="address">
           Journey's Christian Counseling<br />
           601 West Nifong, Bldg 5A, Columbia, MO 65203<br />
           (573) 355-0263
-          </h2>
-          <div class="clear"></div>
-      </hgroup>
-      <nav>
-        <ul>
-          <li><a href="meetus.html">Meet Us</a></li>
-          <li><a href="ourservices.html" class="current">Our Services</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="gettingstarted.html">Getting Started</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="contactus.html">Contact Us</a></li>
-        </ul>
-      </nav>
+        </div>
+      </div>
     </header>
 
-    <section id="content" class="body">
+    <div class="navigation">
+      <div class="nav-item"><a href="meetus.html">Meet Us</a></div>
+      <div class="nav-item"><a href="ourservices.html" class="current">Our Services</a></div>
+      <div class="nav-item"><a href="faq.html">FAQ</a></div>
+      <div class="nav-item"><a href="gettingstarted.html">Getting Started</a></div>
+      <div class="nav-item"><a href="resources.html">Resources</a></div>
+      <div class="nav-item"><a href="contactus.html">Contact Us</a></div>
+    </div>
+
+    <section class="body">
+      <h2>Our Services</h2>
       <section class="ourservices">
 
         <section class="left-column">
-
-          <h2>Our Services</h2>
 
           <div>Journeys Christian Counseling offers individual, family, couples, and group therapy for adults, teens and
             children dealing with the following issues:</div>
@@ -102,9 +106,8 @@
         </section>
 
       </section>
-      <div class="clear"></div>
     </section>
-  </form>
+  </div>
 </body>
 
 </html>

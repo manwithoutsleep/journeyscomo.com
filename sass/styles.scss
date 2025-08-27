@@ -883,94 +883,74 @@ figure.left {
             }
         }
     }
+
+    /*
+    Our Services
+    *****************/
+    .ourservices {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 15px 5px;
+
+        .left-column {
+            flex: 0 0 275px;
+            padding-right: 20px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+
+            div {
+                background-color: $font-color-light;
+                border-color: $background-color-title;
+                border-style: solid;
+                border-width: 5px;
+                border-radius: 0;
+                line-height: 1.23em;
+                margin: 0;
+                padding: 5px;
+            }
+        }
+
+        figure {
+            flex: 0 0 239px;
+            margin: 0 0 10px 0;
+            padding: 0 10px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+            }
+        }
+
+        .right-column {
+            flex: 1;
+            min-width: 300px;
+            padding-left: 10px;
+            box-sizing: border-box;
+
+            h3 {
+                background-color: $background-color-title;
+                color: $font-color-light;
+                font-size: 1.3em;
+                font-style: normal;
+                font-weight: normal;
+                margin: 0 0 10px 0;
+                padding: 6px;
+                text-align: center;
+            }
+
+            p {
+                color: $background-color-title;
+                line-height: 1.23em;
+                margin-bottom: 20px;
+            }
+        }
+    }
 }
-
-/*
-  Our Services
-*****************/
-
-#content .ourservices .left-column {
-    border: 0;
-    float: left;
-    margin: 0 10px 0 0;
-    padding: 0;
-    width: 275px;
-}
-
-#content .ourservices .left-column h2 {
-    width: auto;
-}
-
-#content .ourservices .left-column div {
-    background-color: $font-color-light;
-    border-color: $background-color-title;
-    border-style: solid;
-    border-width: 5px;
-    border-radius: 0;
-    line-height: 1.23em;
-    margin: 0;
-    padding: 5px;
-    width: auto;
-}
-
-#content .ourservices .left-column div p {
-    border: 0;
-    margin: 6px 0;
-    padding: 0;
-}
-
-#content .ourservices figure {
-    background-color: $background-color-title;
-    border-color: $background-color-title;
-    border-style: solid;
-    border-width: 5px;
-    border-radius: 0;
-    float: left;
-    margin: 38px 0 0 0;
-    padding: 0;
-    width: 239px;
-}
-
-#content .ourservices figure img {
-    border-color: $background-color-title;
-    border-style: solid;
-    border-width: 6px;
-    border-radius: 15px;
-    display: block;
-    height: 164px;
-    margin: 0;
-    padding: 0;
-    width: 227px;
-}
-
-#content .ourservices .right-column {
-    color: $font-color-light;
-    float: right;
-    padding: 0 3px;
-    width: 408px;
-}
-
-#content .ourservices .right-column h3 {
-    background-color: $background-color-title;
-    color: $font-color-light;
-    font-size: 1.3em;
-    font-style: normal;
-    font-weight: normal;
-    margin: 0;
-    padding: 6px;
-    text-align: center;
-    width: auto;
-}
-
-#content .ourservices .right-column p {
-    color: $background-color-title;
-    line-height: 1.23em;
-    margin: 2px 0 5px 0;
-    padding: 5px;
-    width: auto;
-}
-
-
 
 /*
   Resources
