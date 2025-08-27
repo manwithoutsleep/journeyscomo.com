@@ -273,6 +273,19 @@ figure {
   padding: 0;
 }
 
+#header-placeholder {
+  min-height: 140px;
+}
+@media screen and (max-width: 600px) {
+  #header-placeholder {
+    min-height: 60px;
+  }
+}
+
+#navigation-placeholder {
+  min-height: 40px;
+}
+
 img.right figure.right {
   float: right;
   margin: 0 0 2em 2em;

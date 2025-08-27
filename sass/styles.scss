@@ -229,6 +229,17 @@ figure {
     padding: 0;
 }
 
+#header-placeholder {
+    min-height: 140px; // Height for large screen header
+    @media screen and (max-width: $app-width-small-screen) {
+        min-height: $app-navigation-header-height-small-screen; // Height for small screen header
+    }
+}
+
+#navigation-placeholder {
+    min-height: 40px; // Height for navigation
+}
+
 img.right figure.right {
     float: right;
     margin: 0 0 2em 2em;
