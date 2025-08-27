@@ -405,3 +405,6 @@ FodyWeavers.xsd
 # PHP Composer
 vendor/
 .env
+
+# Claude Code Local Settings
+.claude/
