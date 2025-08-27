@@ -461,142 +461,107 @@ figure.left {
     *****************/
 
     .home-page {
-        border: 0;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 5px;
 
         .main {
-            height: 100%;
-            float: left;
-            width: 644px;
-
+            flex: 2;
+            min-width: 300px;
+            padding-right: 10px;
+            box-sizing: border-box;
 
             .rotating-banner {
-                display: block;
-                height: 326px;
-                margin: 0;
-                padding: 0;
                 position: relative;
-                width: 644px;
+                max-width: 644px;
+                padding-top: 50.62%; /* (326 / 644) * 100% */
 
                 img {
-                    display: none;
+                    width: 100%;
+                    height: auto;
+                    display: none; // Assuming JS handles the rotation
                     position: absolute;
                     top: 0;
+                    left: 0;
+                }
+
+                img:first-child {
+                    display: block; // Show the first image
                 }
 
                 .rotator-overlay {
-                    background: transparent;
-                    background: rgba(255, 255, 255, 0.6);
-                    font-size: 1.92em;
-                    height: 216px;
-                    left: 440px;
-                    line-height: 1.1em;
-                    padding: 55px 5px;
                     position: absolute;
-                    text-align: center;
                     top: 0;
-                    width: 177px;
-                    z-index: 1000;
+                    right: 0;
+                    width: 30%;
+                    height: 100%;
+                    background: rgba(255, 255, 255, 0.6);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    padding: 10px;
+                    font-size: 1.5em;
+                    line-height: 1.2;
+                    box-sizing: border-box;
                 }
             }
 
             .main-text {
-                border-color: $background-color-title;
-                border-style: solid;
-                border-width: 3px;
+                border: 3px solid $background-color-title;
                 border-radius: 3px;
-                box-sizing: border-box;
-                margin: 4px;
+                margin-top: 10px;
+                padding: 0; // Remove padding from the container
 
                 h2 {
-                    box-sizing: border-box;
                     width: 100%;
+                    margin: 0; // Remove margin from h2 to attach to border
                 }
 
                 p {
                     font-size: 1.25em;
-                    padding: 18px 5px;
+                    padding: 0 15px 15px 15px; // Add padding to paragraphs
+                }
+
+                p:first-of-type {
+                    padding-top: 15px; // Add top padding to the first paragraph
                 }
             }
         }
 
-
-        /*
-        Home Page Sidebar
-        *****************/
-
-        section.sidebar {
+        .sidebar {
+            flex: 1;
+            min-width: 300px;
             box-sizing: border-box;
-            float: right;
-            height: 100%;
-            width: 308px;
 
-            .video {
-                border-color: $background-color-title;
-                border-style: solid;
-                border-width: 3px;
+            .video,             .newsletter {
+                border: 3px solid $background-color-title;
                 border-radius: 3px;
-                box-sizing: border-box;
-                margin: 4px;
-
-                h2 {
-                    border: 0;
-                    box-sizing: border-box;
-                    font-size: 25px;
-                    margin: 0;
-                    text-align: center;
-                    width: 100%;
-                }
-
-                video {
-                    border: 0;
-                    box-sizing: border-box;
-                    margin: 0;
-                    width: 100%;
-                }
-
-                div {
-                    border: 0;
-                    box-sizing: border-box;
-                    margin: 0;
-                    padding: 5px 0;
-                    text-align: center;
-                }
-
-                input {
-                    font-size: 1.1em;
-                    font-weight: bold;
-                    height: 2em;
-                }
-            }
-
-            .newsletter {
-                border-color: $background-color-title;
-                border-style: solid;
-                border-width: 3px;
-                border-radius: 3px;
-                box-sizing: border-box;
-                margin: 4px;
+                margin-bottom: 10px;
+                padding: 0; // Remove padding from the container
                 text-align: center;
 
                 h2 {
-                    box-sizing: border-box;
-                    font-size: 25px;
                     width: 100%;
+                    font-size: 1.5em;
+                    margin: 0; // Remove margin from h2 to attach to border
                 }
 
-                img {
-                    border: 0;
+                video {
+                    width: 100%;
+                    height: auto;
+                    display: block;
                     margin: 0;
-                    padding: 0;
-                    width: 100%;
                 }
 
-                p {
-                    padding: .3em;
-                    text-align: center;
+                img { // This applies to the newsletter image
+                    max-width: 100%;
+                    height: auto;
+                    padding: 10px; // Add padding to the image
+                }
+
+                p { // This applies to the newsletter text
+                    padding: 0 10px 10px 10px; // Add padding to the paragraph
                 }
             }
         }

@@ -497,125 +497,95 @@ figure.left {
   text-decoration: none;
 }
 .body .home-page {
-  border: 0;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  /*
-  Home Page Sidebar
-  *****************/
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 5px;
 }
 .body .home-page .main {
-  height: 100%;
-  float: left;
-  width: 644px;
+  flex: 2;
+  min-width: 300px;
+  padding-right: 10px;
+  box-sizing: border-box;
 }
 .body .home-page .main .rotating-banner {
-  display: block;
-  height: 326px;
-  margin: 0;
-  padding: 0;
   position: relative;
-  width: 644px;
+  max-width: 644px;
+  padding-top: 50.62%; /* (326 / 644) * 100% */
 }
 .body .home-page .main .rotating-banner img {
+  width: 100%;
+  height: auto;
   display: none;
   position: absolute;
   top: 0;
+  left: 0;
+}
+.body .home-page .main .rotating-banner img:first-child {
+  display: block;
 }
 .body .home-page .main .rotating-banner .rotator-overlay {
-  background: transparent;
-  background: rgba(255, 255, 255, 0.6);
-  font-size: 1.92em;
-  height: 216px;
-  left: 440px;
-  line-height: 1.1em;
-  padding: 55px 5px;
   position: absolute;
-  text-align: center;
   top: 0;
-  width: 177px;
-  z-index: 1000;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.5em;
+  line-height: 1.2;
+  box-sizing: border-box;
 }
 .body .home-page .main .main-text {
-  border-color: #5f3f27;
-  border-style: solid;
-  border-width: 3px;
+  border: 3px solid #5f3f27;
   border-radius: 3px;
-  box-sizing: border-box;
-  margin: 4px;
+  margin-top: 10px;
+  padding: 0;
 }
 .body .home-page .main .main-text h2 {
-  box-sizing: border-box;
   width: 100%;
+  margin: 0;
 }
 .body .home-page .main .main-text p {
   font-size: 1.25em;
-  padding: 18px 5px;
+  padding: 0 15px 15px 15px;
 }
-.body .home-page section.sidebar {
+.body .home-page .main .main-text p:first-of-type {
+  padding-top: 15px;
+}
+.body .home-page .sidebar {
+  flex: 1;
+  min-width: 300px;
   box-sizing: border-box;
-  float: right;
-  height: 100%;
-  width: 308px;
 }
-.body .home-page section.sidebar .video {
-  border-color: #5f3f27;
-  border-style: solid;
-  border-width: 3px;
+.body .home-page .sidebar .video, .body .home-page .sidebar .newsletter {
+  border: 3px solid #5f3f27;
   border-radius: 3px;
-  box-sizing: border-box;
-  margin: 4px;
-}
-.body .home-page section.sidebar .video h2 {
-  border: 0;
-  box-sizing: border-box;
-  font-size: 25px;
-  margin: 0;
-  text-align: center;
-  width: 100%;
-}
-.body .home-page section.sidebar .video video {
-  border: 0;
-  box-sizing: border-box;
-  margin: 0;
-  width: 100%;
-}
-.body .home-page section.sidebar .video div {
-  border: 0;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 5px 0;
-  text-align: center;
-}
-.body .home-page section.sidebar .video input {
-  font-size: 1.1em;
-  font-weight: bold;
-  height: 2em;
-}
-.body .home-page section.sidebar .newsletter {
-  border-color: #5f3f27;
-  border-style: solid;
-  border-width: 3px;
-  border-radius: 3px;
-  box-sizing: border-box;
-  margin: 4px;
-  text-align: center;
-}
-.body .home-page section.sidebar .newsletter h2 {
-  box-sizing: border-box;
-  font-size: 25px;
-  width: 100%;
-}
-.body .home-page section.sidebar .newsletter img {
-  border: 0;
-  margin: 0;
+  margin-bottom: 10px;
   padding: 0;
-  width: 100%;
-}
-.body .home-page section.sidebar .newsletter p {
-  padding: 0.3em;
   text-align: center;
+}
+.body .home-page .sidebar .video h2, .body .home-page .sidebar .newsletter h2 {
+  width: 100%;
+  font-size: 1.5em;
+  margin: 0;
+}
+.body .home-page .sidebar .video video, .body .home-page .sidebar .newsletter video {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+.body .home-page .sidebar .video img, .body .home-page .sidebar .newsletter img {
+  max-width: 100%;
+  height: auto;
+  padding: 10px;
+}
+.body .home-page .sidebar .video p, .body .home-page .sidebar .newsletter p {
+  padding: 0 10px 10px 10px;
 }
 .body .faq {
   padding: 15px;
