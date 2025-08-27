@@ -383,9 +383,85 @@ figure.left {
     padding: 0;
     width: 100%;
 
+    @media screen and (min-width: $app-width-small-screen) and (max-width: 700px) {
+        font-size: 1.09em; // 25% smaller than 1.45em
+    }
+
+    // Hamburger menu button - hidden on large screens
+    .hamburger-menu {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 24px;
+        width: 30px;
+        padding: 0;
+
+        @media screen and (max-width: $app-width-small-screen) {
+            display: flex;
+        }
+
+        .hamburger-line {
+            background-color: $font-color-light;
+            height: 3px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+    }
+
+    // Navigation menu
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+
+        @media screen and (max-width: $app-width-small-screen) {
+            background-color: $background-color-site;
+            border: 2px solid $border-color-dark;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 10px 0;
+        }
+    }
+
+    // Show menu when nav-open class is added
+    &.nav-open .nav-menu {
+        @media screen and (max-width: $app-width-small-screen) {
+            display: flex;
+        }
+    }
+
+    // Transform hamburger to X when menu is open
+    &.nav-open .hamburger-menu .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    &.nav-open .hamburger-menu .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    &.nav-open .hamburger-menu .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
     .nav-item {
         display: flex;
         margin: 0;
+
+        @media screen and (max-width: $app-width-small-screen) {
+            justify-content: center;
+            padding: 5px 0;
+        }
 
         a:link,
         a:visited {
@@ -394,6 +470,11 @@ figure.left {
             height: 30px;
             padding: 3px;
             text-decoration: none;
+
+            @media screen and (max-width: $app-width-small-screen) {
+                color: $font-color-dark;
+                padding: 10px 20px;
+            }
         }
 
         a:active,
@@ -407,6 +488,11 @@ figure.left {
         a:hover {
             border-radius: 5px;
             box-shadow: inset -2px -2px 2px #888, inset 2px 2px 2px #ccc;
+
+            @media screen and (max-width: $app-width-small-screen) {
+                background-color: $background-color-card;
+                box-shadow: none;
+            }
         }
 
         a.current {
