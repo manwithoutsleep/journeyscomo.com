@@ -668,54 +668,40 @@ figure.left {
   margin-top: 10px;
 }
 .body .meet-one {
-  border: 0;
-  box-sizing: border-box;
   display: flex;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
+  flex-wrap: wrap;
+  padding: 15px 5px;
 }
 .body .meet-one figure {
-  display: flex;
-  flex-direction: column;
-  margin: 5px;
-  width: 241px;
+  flex: 0 0 241px;
+  margin: 10px;
+  text-align: center;
 }
 .body .meet-one figure div {
   background-color: #803909;
-  border: 0;
+  padding: 10px;
   box-sizing: border-box;
-  height: 296px;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  top: 0;
-  width: 241px;
 }
-.body .meet-one figure div img {
-  border-color: #803909;
-  border-radius: 25px;
-  border-style: solid;
-  border-width: 10px;
-  height: 276px;
-  width: 221px;
+.body .meet-one figure img {
+  border-radius: 15px;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 .body .meet-one figure figcaption {
-  padding-left: 5px;
-}
-.body .meet-one .text-content {
-  background-color: #fbe3c9;
-  border-color: #5f3f27;
-  border-style: solid;
-  border-width: 5px;
-  border-radius: 3px;
-  box-sizing: border-box;
-  margin: 5px;
   padding: 5px;
 }
-.body .meet-one div.clear {
-  position: relative;
+.body .meet-one .text-content {
+  flex: 2;
+  min-width: 300px;
+  background-color: #fbe3c9;
+  border: 5px solid #5f3f27;
+  border-radius: 3px;
+  margin: 10px;
+  padding: 15px;
+}
+.body .meet-one .text-content ul {
+  margin-top: 0;
 }
 .body .contactus {
   display: flex;

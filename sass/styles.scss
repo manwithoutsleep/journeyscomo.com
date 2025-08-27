@@ -674,59 +674,45 @@ figure.left {
     *****************/
 
     .meet-one {
-        border: 0;
-        box-sizing: border-box;
         display: flex;
-        flex-direction: row;
-        margin: 0;
-        padding: 0;
+        flex-wrap: wrap;
+        padding: 15px 5px;
 
         figure {
-            display: flex;
-            flex-direction: column;
-            margin: 5px;
-            width: 241px;
+            flex: 0 0 241px;
+            margin: 10px;
+            text-align: center;
 
             div {
-                background-color: $background-color-margin;
-                border: 0;
+                background-color: $border-color-mid;
+                padding: 10px;
                 box-sizing: border-box;
-                height: 296px;
-                left: 0;
-                margin: 0;
-                padding: 0;
-                position: relative;
-                top: 0;
-                width: 241px;
+            }
 
-                img {
-                    border-color: $border-color-mid;
-                    border-radius: 25px;
-                    border-style: solid;
-                    border-width: 10px;
-                    height: 276px;
-                    width: 221px;
-                }
+            img {
+                border-radius: 15px;
+                max-width: 100%;
+                height: auto;
+                display: block;
             }
 
             figcaption {
-                padding-left: 5px;
+                padding: 5px;
             }
         }
 
         .text-content {
+            flex: 2;
+            min-width: 300px;
             background-color: $font-color-light;
-            border-color: $background-color-title;
-            border-style: solid;
-            border-width: 5px;
+            border: 5px solid $background-color-title;
             border-radius: 3px;
-            box-sizing: border-box;
-            margin: 5px;
-            padding: 5px;
-        }
+            margin: 10px;
+            padding: 15px;
 
-        div.clear {
-            position: relative;
+            ul {
+                margin-top: 0;
+            }
         }
     }
 
