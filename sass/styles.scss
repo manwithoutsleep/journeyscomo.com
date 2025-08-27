@@ -607,7 +607,7 @@ figure.left {
     *****************/
 
     .faq {
-        padding: 0 5px;
+        padding: 15px;
 
         h3 {
             color: $font-color-mid;
@@ -627,62 +627,44 @@ figure.left {
     *****************/
 
     .meet-us-page {
-        text-align: center;
-        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 15px;
 
-        section {
-            border: 0;
-            display: inline-block;
-            margin: 12px;
-            padding: 0;
-            width: 431px;
-
-            div {
-                background-color: $font-color-light;
-                border-color: $background-color-title;
-                border-style: solid;
-                border-width: 3px;
-                border-radius: 3px;
-                display: block;
-                height: 300px;
-                margin: 0;
+        .counselor-card {
+            > a {
                 padding: 0;
-                width: 431px;
+            }
 
-                div {
-                    background-color: transparent;
-                    border: 0;
-                    display: block;
-                    float: left;
-                    font-size: 1em;
-                    margin: 0;
-                    padding: 3px;
-                    width: 229px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            background-color: $font-color-light;
+            border: 3px solid $background-color-title;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 5px;
+            max-width: 500px;
 
-                    p {
+            img {
+                border: 3px solid $font-color-light;
+                border-radius: 15px;
+                margin-right: 15px;
+                margin-bottom: 10px;
+                width: 182px;
+                height: 235px;
+            }
 
-                        text-align: left;
-                    }
-                }
+            .counselor-info {
+                flex: 1;
+                min-width: 250px;
+            }
 
-                a img {
-                    border-color: $font-color-light;
-                    border-radius: 15px;
-                    border-style: solid;
-                    border-width: 3px;
-                    float: left;
-                    height: 235px;
-                    margin: 3px 0;
-                    padding: 0;
-                    width: 182px;
-                }
-
-                div a.read-more-link {
-                    display: block;
-                    margin-top: -1em;
-                    padding-top: 0;
-                    text-align: right;
-                }
+            .read-more-link {
+                display: block;
+                text-align: right;
+                margin-top: 10px;
             }
         }
     }
@@ -895,7 +877,7 @@ figure.left {
 
         .left-column {
             flex: 0 0 275px;
-            padding-right: 20px;
+            padding-right: 10px;
             box-sizing: border-box;
             margin-bottom: 10px;
 
@@ -911,19 +893,15 @@ figure.left {
             }
         }
 
-        figure {
+        .our-services-image-wrapper {
             flex: 0 0 239px;
-            margin: 0 0 10px 0;
-            padding: 0 10px;
+            margin: 0 10px 10px 10px;
+            padding: 0;
             box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
 
             img {
                 width: 100%;
                 height: auto;
-                border-radius: 15px;
             }
         }
 
