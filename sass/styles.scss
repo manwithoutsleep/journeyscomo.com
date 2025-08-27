@@ -890,6 +890,7 @@ figure.left {
     .ourservices {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         padding: 15px 5px;
 
         .left-column {
@@ -950,111 +951,62 @@ figure.left {
             }
         }
     }
-}
 
-/*
-  Resources
-*****************/
+    /*
+    Resources
+    *****************/
+    .resources {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 15px 5px;
 
-#content .resources .left-column {
-    float: left;
-    margin-right: 35px;
-    margin-left: 5px;
-    width: 300px;
-}
+        .left-column, .center-column, .right-column {
+            flex: 1;
+            min-width: 280px;
+            padding: 0 10px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
 
-#content .resources .center-column {
-    float: left;
-    width: 280px;
-}
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+        }
 
-#content .resources .right-column {
-    float: right;
-    width: 300px;
-}
+        .box {
+            margin-bottom: 20px;
+            
+            h3 {
+                margin-bottom: 10px;
+            }
 
-#content .resources .left-column img {
-    margin: 0 auto;
-}
+            hr {
+                background-color: $background-color-title;
+                border: 0;
+                color: $background-color-title;
+                height: 2px;
+                margin: 10px auto;
+                padding: 0;
+                width: 95%;
+            }
+        }
 
-#content .resources .right-column img {
-    margin: 0 auto;
-}
+        .center-column .box {
+            background-color: $font-color-light;
+            border-color: $background-color-title;
+            border-style: solid;
+            border-width: 5px;
+            border-radius: 3px;
+            padding: 10px;
+        }
 
-#content .resources .box {
-    margin: 0 0 10px 0;
-    padding: 0;
-    width: auto;
-}
-
-#content .resources .center-column .box {
-    background-color: $font-color-light;
-    border-color: $background-color-title;
-    border-style: solid;
-    border-width: 5px;
-    border-radius: 3px;
-    margin: 0 0 10px 0;
-    padding: 0;
-    width: auto;
-}
-
-#content .resources .box h3 {
-    margin: 6px;
-}
-
-#content .resources .box p {
-    margin: 6px;
-}
-
-#content .resources .box p.contact-name {
-    clear: both;
-    margin-bottom: 0;
-}
-
-#content .resources .box p.contact-phone {
-    margin-top: 0;
-    text-align: right;
-    white-space: nowrap;
-}
-
-#content .resources .box p.contact-single-left {
-    border: 0;
-    float: left;
-    margin: 0 0 6px 6px;
-    padding: 0;
-}
-
-#content .resources .box p.contact-single-right {
-    border: 0;
-    margin: 0 6px 6px 0;
-    padding: 0;
-    text-align: right;
-    white-space: nowrap;
-}
-
-#content .resources .box hr {
-    background-color: $background-color-title;
-    border: 0;
-    color: $background-color-title;
-    height: 12px;
-    margin: 0 0 10px 0;
-    padding: 0;
-    width: 95%;
-}
-
-#content .resources .left-column hr {
-    margin-left: 0;
-    margin-right: auto;
-}
-
-#content .resources .center-column hr {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#content .resources .right-column hr {
-    margin-left: auto;
-    margin-right: 0;
+        .contact {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 }
 
 /*
