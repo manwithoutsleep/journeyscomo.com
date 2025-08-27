@@ -2,108 +2,109 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-  <title>Getting Started | Journeys Christian Counseling</title>
+    <title>Getting Started | Journeys Christian Counseling</title>
 
-  <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans' />
-  <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' />
-  <link rel='stylesheet' type='text/css' href='css/main.css' />
+    <link rel="stylesheet" type='text/css' href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans' />
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' />
+    <link rel='stylesheet' type='text/css' href='sass/styles.css' />
 
-  <script type="text/javascript" src="/js/welcome.js"></script>
+    <script type="text/javascript" src="/js/welcome.js"></script>
 </head>
 
 <body id="index" class="home">
-  <form id="form1">
-    <header id="banner" class="body">
-      <hgroup>
-        <h1><a href="/">Journey's Christian Counseling</a></h1>
-        <div class="address">
-          Journey's Christian Counseling<br />
-          601 West Nifong, Bldg 5A, Columbia, MO 65203<br />
-          (573) 355-0263
-          </h2>
-          <div class="clear"></div>
-      </hgroup>
-      <nav>
-        <ul>
-          <li><a href="meetus.html">Meet Us</a></li>
-          <li><a href="ourservices.html">Our Services</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="gettingstarted.html" class="current">Getting Started</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="contactus.html">Contact Us</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div class="main-wrapper">
+        <header class="header">
+            <div class="header-small-screen">
+                <button mat-icon-button class="menu-button">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <a href="index.html"><img src="images/JourneysLogo.png" alt="Journeys Christian Counseling"></a>
+            </div>
+            <div class="header-large-screen">
+                <h1><a href="index.html">Journey's Christian Counseling</a></h1>
+                <div class="address">
+                    Journey's Christian Counseling<br />
+                    601 West Nifong, Bldg 5A, Columbia, MO 65203<br />
+                    (573) 355-0263
+                </div>
+            </div>
+        </header>
 
-    <section id="content" class="body">
-      <section class="gettingstarted">
-        <section class="left-sidebar">
+        <div class="navigation">
+            <div class="nav-item"><a href="meetus.html">Meet Us</a></div>
+            <div class="nav-item"><a href="ourservices.html">Our Services</a></div>
+            <div class="nav-item"><a href="faq.html">FAQ</a></div>
+            <div class="nav-item"><a href="gettingstarted.html" class="current">Getting Started</a></div>
+            <div class="nav-item"><a href="resources.html">Resources</a></div>
+            <div class="nav-item"><a href="contactus.html">Contact Us</a></div>
+        </div>
 
-          <h2>Getting Started</h2>
+        <section class="body">
+            <h2>Getting Started</h2>
+            <section class="gettingstarted">
+                <section class="left-sidebar">
 
-          <style>
-            .spwidget-button,
-            .spwidget-button:link,
-            .spwidget-button:visited,
-            .spwidget-button:hover,
-            .spwidget-button:active {
-              font-family: Arial;
-              font-size: 13px;
-              font-weight: normal;
-              height: 15px;
-              margin: 4px 0px;
-              padding: 2px 6px;
-              text-align: center;
-              width: 239px;
-            }
-          </style>
-          <div class="spwidget-button-wrapper"><a href="https://journeys-christian-counseling.clientsecure.me" class="spwidget-button"
-              data-spwidget-scope-id="f08a52e2-d87e-4fbd-b2b0-9583ed9d9dc8"
-              data-spwidget-scope-uri="journeys-christian-counseling"
-              data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b"
-              data-spwidget-scope-global data-spwidget-autobind>
-              Make An Appointment
-            </a></div>
-            <script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js"></script>
+                    <div class="spwidget-button-wrapper"><a href="https://journeys-christian-counseling.clientsecure.me"
+                            class="spwidget-button" data-spwidget-scope-id="f08a52e2-d87e-4fbd-b2b0-9583ed9d9dc8"
+                            data-spwidget-scope-uri="journeys-christian-counseling"
+                            data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b"
+                            data-spwidget-scope-global data-spwidget-autobind>
+                            Make An Appointment
+                        </a></div>
+                    <script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js"></script>
 
-          <div><input type="submit" name="GetFormsClient" id="GetFormsClient" value="Client Registration Form"
-              onclick="this.form.action = '/pdf/JourneysRegistrationClient.pdf'; this.form.target = '_blank';" /></div>
+                    <form action="/pdf/JourneysRegistrationClient.pdf" target="_blank">
+                        <input type="submit" name="GetFormsClient" id="GetFormsClient"
+                            value="Client Registration Form" />
+                    </form>
+                    <form action="/pdf/JourneysRegistrationCouple.pdf" target="_blank">
+                        <input type="submit" name="GetFormsCouple" id="GetFormsCouple"
+                            value="Couples Registration Form" />
+                    </form>
 
-          <div><input type="submit" name="GetFormsCouple" id="GetFormsCouple" value="Couples Registration Form"
-              onclick="this.form.action = '/pdf/JourneysRegistrationCouple.pdf'; this.form.target = '_blank';" /></div>
+                    <img src="images/OfficePhotos.jpg" alt="Comfortable office photos" />
+                </section>
 
-          <img src="images/OfficePhotos.jpg" alt="Comfortable office photos"/>
+                <section class="main">
+                    <h3>Making an appointment</h3>
+                    <p>At Journeys Christian Counseling most of our clients love to use our on-line system to make
+                        appointments!
+                        Just click on the Appointment buttons throughout our website to set up a client record with us
+                        and pick a
+                        session time that is convenient for you. Once you have your password, you can access our
+                        scheduling system
+                        anytime in the day or night and make changes or add new appointments.
+                    </p>
+
+                    <h3>The First Session & Forms</h3>
+                    <p>If you are a new client with us, please print out the New Client Registration Form (required) by
+                        clicking
+                        on the button on the left. Please fill out this form prior to meeting with your counselor in
+                        order to better
+                        prepare you for your time together. If you are coming in for a Couples Session, please also
+                        complete the
+                        short couples form (optional). If you don't have a chance to print and fill out the New Client
+                        Registration
+                        form, we'll take a few minutes at the beginning of your session to get that taken care of.</p>
+
+                    <h3>Counseling Fees</h3>
+                    <p>The fee for an individual, couples, or family session is $95. Each session lasts 50 minutes. The
+                        fee for
+                        each session will be due and must be paid at the conclusion of each session unless otherwise
+                        arranged. Cash,
+                        personal checks, credit/debit cards, and health savings cards are acceptable for payment.</p>
+
+                    <h3>Cancellations</h3>
+                    <p>When you schedule an appointment time, that time is specifically reserved for you. If unable to
+                        keep an
+                        appointment, notification by phone 24 hours before your scheduled time is required. You will be
+                        charged the
+                        full fee for any missed appointments without 24 hour notice.</p>
+                </section>
+            </section>
         </section>
-
-        <section class="main">
-          <h3>Making an appointment</h3>
-          <p>At Journeys Christian Counseling most of our clients love to use our on-line system to make appointments!
-            Just click on the Appointment buttons throughout our website to set up a client record with us and pick a
-            session time that is convenient for you. Once you have your password, you can access our scheduling system
-            anytime in the day or night and make changes or add new appointments.
-          </p>
-
-          <h3>The First Session & Forms</h3>
-          <p>If you are a new client with us, please print out the New Client Registration Form (required) by clicking
-            on the button on the left. Please fill out this form prior to meeting with your counselor in order to better
-            prepare you for your time together. If you are coming in for a Couples Session, please also complete the
-            short couples form (optional). If you don't have a chance to print and fill out the New Client Registration
-            form, we'll take a few minutes at the beginning of your session to get that taken care of.</p>
-
-          <h3>Counseling Fees</h3>
-          <p>The fee for an individual, couples, or family session is $95. Each session lasts 50 minutes. The fee for
-            each session will be due and must be paid at the conclusion of each session unless otherwise arranged. Cash,
-            personal checks, credit/debit cards, and health savings cards are acceptable for payment.</p>
-
-          <h3>Cancellations</h3>
-          <p>When you schedule an appointment time, that time is specifically reserved for you. If unable to keep an
-            appointment, notification by phone 24 hours before your scheduled time is required. You will be charged the
-            full fee for any missed appointments without 24 hour notice.</p>
-        </section>
-      </section>
-      <div class="clear"></div>
-    </section>
-  </form>
+    </div>
 </body>
 
 </html>

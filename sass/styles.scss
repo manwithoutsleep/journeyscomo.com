@@ -180,9 +180,11 @@ figure {
 
 /***** Appointment Buttons: spwidget *****/
 .spwidget-button-wrapper {
+    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    text-align: center;
+    text-align: left;
+    width: 100%;
 }
 
 .spwidget-button,
@@ -193,12 +195,16 @@ figure {
     background: #f0f0f0;
     border: 1px #000 solid;
     border-radius: 3px;
+    box-shadow: none;
     color: #000;
     display: inline-block;
-    font-size: 16px;
-    font-weight: 700;
-    margin: 0;
-    padding: 6px;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: normal;
+    height: 15px;
+    margin: 4px 0px;
+    padding: 2px 6px;
+    text-align: center;
     text-decoration: none;
     text-shadow: none;
 }
@@ -787,18 +793,7 @@ figure.left {
                 .spwidget-button:visited,
                 .spwidget-button:hover,
                 .spwidget-button:active {
-                    font-family: Arial;
-                    font-size: 13px;
-                    font-weight: normal;
-                    height: 15px;
-                    margin: 4px 0px;
-                    padding: 2px 6px;
-                    text-align: center;
                     width: 199px;
-                }
-
-                .spwidget-button-wrapper {
-                    text-align: left;
                 }
             }
         }
@@ -825,6 +820,66 @@ figure.left {
                     height: 100%;
                     width: 100%;
                 }
+            }
+        }
+    }
+
+    /*
+    Getting Started
+    *****************/
+    .gettingstarted {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 15px 5px;
+
+        .left-sidebar {
+            flex: 0 0 255px;
+            padding-right: 20px;
+            box-sizing: border-box;
+
+            form {
+                height: auto;
+                width: auto;
+            }
+
+            .spwidget-button,
+            .spwidget-button:link,
+            .spwidget-button:visited,
+            .spwidget-button:hover,
+            .spwidget-button:active {
+                width: 239px;
+            }
+
+            input[type="submit"] {
+                margin: 4px 0;
+                width: 100%;
+                max-width: 255px;
+            }
+
+            img {
+                display: block;
+                height: auto;
+                max-width: 100%;
+                margin: 10px 0;
+            }
+        }
+
+        .main {
+            flex: 2;
+            min-width: 300px;
+            background-color: $font-color-light;
+            border-color: $background-color-title;
+            border-style: solid;
+            border-width: 5px;
+            border-radius: 3px;
+            padding: 20px;
+            box-sizing: border-box;
+
+            h3 {
+                color: $font-color-mid;
+                font-style: italic;
+                font-weight: bold;
+                margin-bottom: 3px;
             }
         }
     }
@@ -915,72 +970,7 @@ figure.left {
     width: auto;
 }
 
-/*
-  Getting Started
-*****************/
 
-#content .gettingstarted .left-sidebar {
-    float: left;
-}
-
-#content .gettingstarted .left-sidebar h2 {
-    margin-bottom: 11px;
-    width: 243px;
-}
-
-#content .gettingstarted .left-sidebar a img {
-    border: 0;
-    display: block;
-    height: auto;
-    margin: 0;
-    padding: 0;
-    width: auto;
-}
-
-#content .gettingstarted .left-sidebar form {
-    border: 0;
-    display: block;
-    margin: 0;
-    padding: 0;
-}
-
-#content .gettingstarted .left-sidebar input[type="submit"] {
-    margin: 4px 0;
-    width: 255px;
-}
-
-#content .gettingstarted .left-sidebar img {
-    border: 0;
-    display: block;
-    height: 380px;
-    margin: 10px 0;
-    padding: 0;
-    width: 255px;
-}
-
-#content .gettingstarted .main {
-    background-color: $font-color-light;
-    border-color: $background-color-title;
-    border-style: solid;
-    border-width: 5px;
-    border-radius: 3px;
-    margin: 0 0 0 40px;
-    padding: 20px 5px;
-    width: 640px;
-}
-
-#content .gettingstarted h3 {
-    color: $font-color-mid;
-    font-style: italic;
-    font-weight: bold;
-    margin-bottom: 3px;
-}
-
-.gettingstarted p {}
-
-.gettingstarted ul {
-    margin-top: 0;
-}
 
 /*
   Resources
