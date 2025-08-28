@@ -303,8 +303,44 @@ figure.left {
         a {
             display: flex;
         }
-    }
 
+        // Hamburger menu button in small screen header
+        .hamburger-menu {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 24px;
+            width: 30px;
+            padding: 0;
+            margin-left: auto;
+
+            .hamburger-line {
+                background-color: $font-color-dark;
+                height: 3px;
+                width: 100%;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+}
+
+// Transform hamburger to X when navigation menu is open
+.nav-open .header-small-screen .hamburger-menu .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.nav-open .header-small-screen .hamburger-menu .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-open .header-small-screen .hamburger-menu .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.header {
     .header-large-screen {
         background: #ffffff;
         border-color: #5f3f27;
@@ -387,29 +423,6 @@ figure.left {
         font-size: 1.09em; // 25% smaller than 1.45em
     }
 
-    // Hamburger menu button - hidden on large screens
-    .hamburger-menu {
-        background: none;
-        border: none;
-        cursor: pointer;
-        display: none;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 24px;
-        width: 30px;
-        padding: 0;
-
-        @media screen and (max-width: $app-width-small-screen) {
-            display: flex;
-        }
-
-        .hamburger-line {
-            background-color: $font-color-light;
-            height: 3px;
-            width: 100%;
-            transition: all 0.3s ease;
-        }
-    }
 
     // Navigation menu
     .nav-menu {
@@ -441,18 +454,6 @@ figure.left {
         }
     }
 
-    // Transform hamburger to X when menu is open
-    &.nav-open .hamburger-menu .hamburger-line:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-
-    &.nav-open .hamburger-menu .hamburger-line:nth-child(2) {
-        opacity: 0;
-    }
-
-    &.nav-open .hamburger-menu .hamburger-line:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
 
     .nav-item {
         display: flex;

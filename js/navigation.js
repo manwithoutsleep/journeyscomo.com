@@ -11,6 +11,7 @@ function initializeHamburgerMenu() {
     if (hamburgerButton && navigation) {
         hamburgerButton.addEventListener('click', () => {
             navigation.classList.toggle('nav-open');
+            document.body.classList.toggle('nav-open');
         });
 
         // Close menu when clicking on a nav item (mobile UX improvement)
@@ -18,13 +19,15 @@ function initializeHamburgerMenu() {
         navItems.forEach(item => {
             item.addEventListener('click', () => {
                 navigation.classList.remove('nav-open');
+                document.body.classList.remove('nav-open');
             });
         });
 
         // Close menu when clicking outside of it
         document.addEventListener('click', (event) => {
-            if (!navigation.contains(event.target)) {
+            if (!navigation.contains(event.target) && !hamburgerButton.contains(event.target)) {
                 navigation.classList.remove('nav-open');
+                document.body.classList.remove('nav-open');
             }
         });
     }
