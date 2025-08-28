@@ -325,6 +325,7 @@ figure.left {
 .header .header-small-screen {
   background-color: #ffffff;
   border: 0;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -352,6 +353,8 @@ figure.left {
   width: 30px;
   padding: 0;
   margin-left: auto;
+  margin-top: 20px;
+  margin-right: 8px;
 }
 .header .header-small-screen .hamburger-menu .hamburger-line {
   background-color: #5f3f27;
