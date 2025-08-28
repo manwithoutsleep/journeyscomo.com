@@ -237,7 +237,12 @@ figure {
 }
 
 #navigation-placeholder {
-    min-height: 40px; // Height for navigation
+    @media screen and (min-width: $app-width-small-screen) {
+        height: 40; // Remove space on small screens since navigation is now a fly-out menu
+    }
+    @media screen and (max-width: $app-width-small-screen) {
+        height: 0; // Remove space on small screens since navigation is now a fly-out menu
+    }
 }
 
 img.right figure.right {
@@ -421,6 +426,11 @@ figure.left {
     margin: .2em 0;
     padding: 0;
     width: 100%;
+
+    @media screen and (max-width: $app-width-small-screen) {
+        height: 0; // Remove height on small screens since navigation is now a fly-out menu
+        margin: 0;
+    }
 
     @media screen and (min-width: $app-width-small-screen) and (max-width: 700px) {
         font-size: 1.09em; // 25% smaller than 1.45em
