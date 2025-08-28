@@ -557,6 +557,9 @@ figure.left {
   Home Page
   *****************/
   /*
+  Newsletter Archives
+  *****************/
+  /*
   FAQ
   *****************/
   /*
@@ -697,6 +700,9 @@ figure.left {
 }
 .body .home-page .sidebar .video p, .body .home-page .sidebar .newsletter p {
   padding: 0 10px 10px 10px;
+}
+.body .newsletter-archives {
+  padding: 15px;
 }
 .body .faq {
   padding: 15px;
