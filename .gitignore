@@ -408,3 +408,6 @@ vendor/
 
 # Claude Code Local Settings
 .claude/
+
+# API Keys and Sensitive Configuration
+js/config.js

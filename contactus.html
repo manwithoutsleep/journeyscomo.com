@@ -13,7 +13,7 @@
     <link rel='stylesheet' type='text/css' href='sass/styles.css' />
 
     <script type="text/javascript" src="js/navigation.js"></script>
-
+    <script type="text/javascript" src="js/config.js"></script>
     <script type="text/javascript" src="js/geocoding.js"></script>
     <script type="text/javascript">
         var itemUrl = "contactus.html";
@@ -26,9 +26,24 @@
         function initMap() {
             initialize_gMap(itemUrl, name, mapInfo, lat, lng, kmlPath);
         }
+        
+        function loadGoogleMapsAPI() {
+            if (!window.AppConfig || !window.AppConfig.googleMapsApiKey) {
+                console.error('Google Maps API key not found in config.js');
+                document.getElementById('map_canvas').innerHTML = 'Map configuration error';
+                return;
+            }
+            
+            var script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${window.AppConfig.googleMapsApiKey}&callback=initMap`;
+            script.async = true;
+            script.defer = true;
+            document.head.appendChild(script);
+        }
+        
+        // Load the API after the page loads
+        document.addEventListener('DOMContentLoaded', loadGoogleMapsAPI);
     </script>
-    <script type="text/javascript" async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAu_HNch8PsVFix6UKYowS_SJ65EAQkMQ&callback=initMap"></script>
 </head>
 
 <body id="index" class="home">
